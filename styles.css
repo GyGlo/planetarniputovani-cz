@@ -57,22 +57,17 @@ h1 {
   position: relative;
   z-index: 1;
   margin: 0;
-  max-width: 18ch;
   color: var(--gold);
-  font-size: clamp(1.56rem, 2.8vw, 2.2rem);
+  font-size: clamp(0.98rem, 2.15vw, 2.2rem);
   font-weight: 900;
   letter-spacing: 0.08em;
   line-height: 1.1;
-  text-wrap: balance;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 @media (max-width: 640px) {
   .landing-logo {
     width: min(28rem, 92vw);
-  }
-
-  h1 {
-    max-width: 14ch;
   }
 }
