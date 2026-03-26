@@ -1,0 +1,74 @@
+:root {
+  --bg: #020712;
+  --text: #f5f6fb;
+  --gold: #f6c85d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  font-family: "Nunito", "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+  background:
+    linear-gradient(180deg, rgba(2, 7, 18, 0.56), rgba(2, 7, 18, 0.9)),
+    url("./assets/background/Planetarni-Stezka_background.jpg") center center / cover no-repeat fixed;
+}
+
+.landing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.landing-glow {
+  position: absolute;
+  inset: auto;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(246, 200, 93, 0.2), transparent 68%);
+  filter: blur(24px);
+}
+
+.landing-logo {
+  position: relative;
+  z-index: 1;
+  width: min(48rem, 88vw);
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4.8rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+@media (max-width: 640px) {
+  .landing-logo {
+    width: min(28rem, 92vw);
+  }
+
+  h1 {
+    max-width: 12ch;
+  }
+}
