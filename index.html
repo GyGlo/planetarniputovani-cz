@@ -3,19 +3,406 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Planetární putování Vraclav</title>
+    <title>Planetární stezka Vraclav</title>
     <meta
       name="description"
-      content="Planetární putování Vraclav. Jednoduchá prezentační landing page s logem a pozadím projektu."
+      content="Návrh webové prezentace pro Planetární stezku Vraclav. Objevte 15 zastavení, mapu trasy a vizuály naučných panelů inspirované skutečnou grafikou projektu."
     />
-    <link rel="preload" href="./assets/background/Planetarni-Stezka_background.jpg" as="image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="./background/Planetarni-Stezka_background.jpg" as="image" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="landing">
-      <div class="landing-glow" aria-hidden="true"></div>
-      <img class="landing-logo" src="./assets/logo/PlanetStezka_logo_4.webp" alt="Logo Planetárního putování" />
-      <h1>Planetární putování Vraclav</h1>
-    </main>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="Planetární stezka Vraclav">
+          <img src="./logo/PlanetStezka_logo_4.webp" alt="Logo Planetární stezky" />
+        </a>
+        <nav class="site-nav" aria-label="Hlavní navigace">
+          <a href="#o-stezce">O stezce</a>
+          <a href="#trasa">Trasa</a>
+          <a href="#zastaveni">Zastavení</a>
+          <a href="#v-terenu">V terénu</a>
+          <a href="#panely">Panely</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Planetární stezka Vraclav</p>
+            <h1>Projděte Sluneční soustavu během vycházky.</h1>
+            <p class="hero-text">
+              Planetární stezka propojuje krajinu, astronomii a místní astronomický příběh.
+              Web vychází přímo z vizuálního stylu hotových panelů, aby návštěvník dostal stejný zážitek
+              online i na trase.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button" href="#trasa">Zobrazit trasu</a>
+              <a class="button button-secondary" href="#panely">Prohlédnout panely</a>
+            </div>
+
+            <div class="stat-grid" aria-label="Základní údaje o stezce">
+              <article class="stat-card">
+                <strong>6 km</strong>
+                <span>celková délka vycházky</span>
+              </article>
+              <article class="stat-card">
+                <strong>15</strong>
+                <span>naučných zastavení</span>
+              </article>
+              <article class="stat-card">
+                <strong>1 : 1 000 000 000</strong>
+                <span>měřítko Sluneční soustavy</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="solar-scene">
+              <div class="solar-haze"></div>
+              <div class="solar-sun"></div>
+              <div class="planet-tooltip" id="planet-tooltip" role="status" aria-live="polite"></div>
+
+              <div class="orbit orbit-mercury">
+                <span class="planet-runner runner-mercury">
+                  <button class="planet planet-mercury" type="button" data-planet-name="Merkur" aria-label="Merkur"></button>
+                </span>
+              </div>
+              <div class="orbit orbit-venus">
+                <span class="planet-runner runner-venus">
+                  <button class="planet planet-venus" type="button" data-planet-name="Venuše" aria-label="Venuše"></button>
+                </span>
+              </div>
+              <div class="orbit orbit-earth">
+                <span class="planet-runner runner-earth">
+                  <button class="planet planet-earth" type="button" data-planet-name="Země" aria-label="Země"></button>
+                </span>
+              </div>
+              <div class="orbit orbit-mars">
+                <span class="planet-runner runner-mars">
+                  <button class="planet planet-mars" type="button" data-planet-name="Mars" aria-label="Mars"></button>
+                </span>
+              </div>
+              <div class="orbit orbit-jupiter">
+                <span class="planet-runner runner-jupiter">
+                  <button class="planet planet-jupiter" type="button" data-planet-name="Jupiter" aria-label="Jupiter"></button>
+                </span>
+              </div>
+              <div class="orbit orbit-saturn">
+                <span class="planet-runner runner-saturn">
+                  <button class="planet planet-saturn" type="button" data-planet-name="Saturn" aria-label="Saturn">
+                    <span class="planet-ring"></span>
+                  </button>
+                </span>
+              </div>
+              <div class="orbit orbit-neptune">
+                <span class="planet-runner runner-neptune">
+                  <button class="planet planet-neptune" type="button" data-planet-name="Neptun" aria-label="Neptun"></button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="story-band" id="o-stezce">
+          <div class="story-card">
+            <p class="eyebrow">Proč stezka vzniká</p>
+            <h2>Popularizace astronomie zasazená přímo do krajiny.</h2>
+            <p>
+              Projekt navazuje na dlouholetou činnost místního astronomického klubu, který od roku 1977
+              pořádá programy pro děti, mládež i veřejnost. Stezka převádí poměry velikostí a vzdáleností
+              planet do skutečné krajiny a doplňuje je o panely s tématy jako komety, zatmění nebo vznik
+              Sluneční soustavy.
+            </p>
+          </div>
+          <div class="story-card accent-card">
+            <p class="eyebrow">Vizuální princip webu</p>
+            <p>
+              Návrh se inspiruje osvědčenou strukturou planetárních stezek: jasný začátek u Slunce, čitelná
+              mapa, sekvence zastavení a kombinace popularizačního obsahu s rodinně přístupnou navigací.
+            </p>
+            <ul class="check-list">
+              <li>barevnost převzatá z panelů a pozadí projektu</li>
+              <li>velké náhledy reálných panelů místo ilustračních maket</li>
+              <li>rychlý přehled trasy pro výlet i školní skupiny</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="route-section" id="trasa">
+          <div class="section-heading">
+            <p class="eyebrow">Trasa a orientace</p>
+            <h2>Jedna trasa, patnáct zastavení.</h2>
+          </div>
+
+          <div class="route-layout">
+            <article class="route-panel map-card">
+              <img src="./assets/route/Planetarni-putovani_Mapa1_2025-06_fD.jpg" alt="Mapa planetární stezky" />
+            </article>
+
+            <article class="route-panel info-card">
+              <h3>Jak je stezka koncipovaná</h3>
+              <p>
+                Naučné panely s planetami jsou rozmístěné v přesném poměru zmenšení, a to jak velikostí,
+                tak vzdáleností od Slunce. Každé stanoviště kombinuje informace, mapku trasy, QR kód a
+                výraznou grafiku z panelové řady.
+              </p>
+              <div class="mini-stats">
+                <div>
+                  <strong>58 m</strong>
+                  <span>Merkur od Slunce</span>
+                </div>
+                <div>
+                  <strong>780 m</strong>
+                  <span>Jupiter od Slunce</span>
+                </div>
+                <div>
+                  <strong>4,5 km</strong>
+                  <span>Neptun od Slunce</span>
+                </div>
+              </div>
+              <img src="./assets/route/Trasa v mapě.jpg" alt="Přehled trasy v mapě" />
+            </article>
+          </div>
+        </section>
+
+        <section class="stops-section" id="zastaveni">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <p class="eyebrow">Program stezky</p>
+              <h2>Od Slunce až po historii astronomického klubu.</h2>
+            </div>
+            <div class="filter-group" role="tablist" aria-label="Filtrování zastavení">
+              <button class="filter-button is-active" type="button" data-filter="all">Všechna</button>
+              <button class="filter-button" type="button" data-filter="planet">Planety</button>
+              <button class="filter-button" type="button" data-filter="theme">Další témata</button>
+            </div>
+          </div>
+
+          <div class="stops-grid">
+            <article class="stop-card" data-kind="planet">
+              <span class="stop-number">01</span>
+              <h3>Slunce</h3>
+              <p>Výchozí bod celé stezky a dominantní instalace s osvětleným modelem.</p>
+            </article>
+            <article class="stop-card" data-kind="planet">
+              <span class="stop-number">02</span>
+              <h3>Merkur</h3>
+              <p>První planeta na trase a ukázka extrémního rozdílu mezi velikostí a vzdáleností.</p>
+            </article>
+            <article class="stop-card" data-kind="planet">
+              <span class="stop-number">03</span>
+              <h3>Venuše</h3>
+              <p>Panel o nejjasnější planetě noční oblohy a jejím skleníkovém světě.</p>
+            </article>
+            <article class="stop-card" data-kind="planet">
+              <span class="stop-number">04</span>
+              <h3>Země a Měsíc</h3>
+              <p>Zastavení věnované domovské planetě, jejímu satelitu a jejich společnému vztahu.</p>
+            </article>
+            <article class="stop-card" data-kind="planet">
+              <span class="stop-number">05</span>
+              <h3>Mars</h3>
+              <p>Červená planeta jako symbol průzkumu a budoucích misí.</p>
+            </article>
+            <article class="stop-card" data-kind="theme">
+              <span class="stop-number">06</span>
+              <h3>Pásmo planetek</h3>
+              <p>Vysvětlení hranice mezi kamennými světy a obřími plynnými planetami.</p>
+            </article>
+            <article class="stop-card" data-kind="planet">
+              <span class="stop-number">07</span>
+              <h3>Jupiter</h3>
+              <p>Největší planeta soustavy a výrazný bod první poloviny stezky.</p>
+            </article>
+            <article class="stop-card" data-kind="planet">
+              <span class="stop-number">08</span>
+              <h3>Saturn</h3>
+              <p>Ikonická planeta prstenců a jeden z vizuálně nejsilnějších panelů celé série.</p>
+            </article>
+            <article class="stop-card" data-kind="theme">
+              <span class="stop-number">09</span>
+              <h3>Teleskopy</h3>
+              <p>Jak lidé pozorují vesmír a proč je technika pro astronomii klíčová.</p>
+            </article>
+            <article class="stop-card" data-kind="planet">
+              <span class="stop-number">10</span>
+              <h3>Uran</h3>
+              <p>Ledový obr s neobvyklým sklonem osy a chladnou barevností panelu.</p>
+            </article>
+            <article class="stop-card" data-kind="theme">
+              <span class="stop-number">11</span>
+              <h3>Komety</h3>
+              <p>Téma návštěvníků z okraje Sluneční soustavy a jejich stop na noční obloze.</p>
+            </article>
+            <article class="stop-card" data-kind="theme">
+              <span class="stop-number">12</span>
+              <h3>Zatmění</h3>
+              <p>Přehled nebeských úkazů, které nejvíc vtahují veřejnost do astronomie.</p>
+            </article>
+            <article class="stop-card" data-kind="planet">
+              <span class="stop-number">13</span>
+              <h3>Neptun</h3>
+              <p>Vzdálený konec planetární řady a vyvrcholení měřítkového putování.</p>
+            </article>
+            <article class="stop-card" data-kind="theme">
+              <span class="stop-number">14</span>
+              <h3>Vznik Sluneční soustavy</h3>
+              <p>Kontext k tomu, jak se z kosmického materiálu zrodily planety i jejich dráhy.</p>
+            </article>
+            <article class="stop-card" data-kind="theme">
+              <span class="stop-number">15</span>
+              <h3>Historie AK Vraclav</h3>
+              <p>Závěrečné zastavení věnované místní astronomické tradici a klubové historii.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="field-section" id="v-terenu">
+          <div class="section-heading">
+            <p class="eyebrow">V terénu</p>
+            <h2>Aktuální fotografie už osazených panelů.</h2>
+            <p>
+              Vedle grafických náhledů je součástí webu i reálná dokumentace z místa. Návštěvník tak hned
+              vidí, jak panely působí v krajině a jak vypadá samotná stezka po instalaci.
+            </p>
+          </div>
+
+          <div class="field-grid">
+            <figure class="field-card field-card-large">
+              <img src="./assets/myfoto/IMG_4095.jpeg" alt="Panel planetární stezky v krajině" />
+              <figcaption>Panel jako orientační bod přímo na trase.</figcaption>
+            </figure>
+            <figure class="field-card">
+              <img src="./assets/myfoto/IMG_4100.jpeg" alt="Další pohled na instalovaný panel planetární stezky" />
+              <figcaption>Skutečné umístění panelu v okolní krajině.</figcaption>
+            </figure>
+            <figure class="field-card">
+              <img src="./assets/myfoto/IMG_4102.jpeg" alt="Instalovaný panel a jeho okolí" />
+              <figcaption>Dokumentační záběr z aktuálně osazené stezky.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="gallery-section" id="panely">
+          <div class="section-heading">
+            <p class="eyebrow">Reálné podklady</p>
+            <h2>Panely použité jako základ webové prezentace.</h2>
+            <p>
+              Níže jsou přímo zakomponované náhledy hotových panelů. Web tak nevytváří novou vizuální vrstvu
+              od nuly, ale rozšiřuje stávající identitu projektu do online prostředí.
+            </p>
+          </div>
+
+          <div class="panel-gallery">
+            <button class="panel-tile" type="button" data-image="./assets/panels/1-Slunce_panel.jpg" data-title="Slunce">
+              <img src="./assets/panels/1-Slunce_panel.jpg" alt="Panel Slunce" />
+              <span>Slunce</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/2-Merkur_panel.jpg" data-title="Merkur">
+              <img src="./assets/panels/2-Merkur_panel.jpg" alt="Panel Merkur" />
+              <span>Merkur</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/3-Venuse_panel.jpg" data-title="Venuše">
+              <img src="./assets/panels/3-Venuse_panel.jpg" alt="Panel Venuše" />
+              <span>Venuše</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/4-Zeme-Mesic_panel.jpg" data-title="Země a Měsíc">
+              <img src="./assets/panels/4-Zeme-Mesic_panel.jpg" alt="Panel Země a Měsíc" />
+              <span>Země a Měsíc</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/5-Mars_panel.jpg" data-title="Mars">
+              <img src="./assets/panels/5-Mars_panel.jpg" alt="Panel Mars" />
+              <span>Mars</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/6-Pasmo-planetek_panel.jpg" data-title="Pásmo planetek">
+              <img src="./assets/panels/6-Pasmo-planetek_panel.jpg" alt="Panel Pásmo planetek" />
+              <span>Pásmo planetek</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/7-Jupiter_panel.jpg" data-title="Jupiter">
+              <img src="./assets/panels/7-Jupiter_panel.jpg" alt="Panel Jupiter" />
+              <span>Jupiter</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/8-Saturn_panel.jpg" data-title="Saturn">
+              <img src="./assets/panels/8-Saturn_panel.jpg" alt="Panel Saturn" />
+              <span>Saturn</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/9-Teleskopy_panel.jpg" data-title="Teleskopy">
+              <img src="./assets/panels/9-Teleskopy_panel.jpg" alt="Panel Teleskopy" />
+              <span>Teleskopy</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/10-Uran_panel.jpg" data-title="Uran">
+              <img src="./assets/panels/10-Uran_panel.jpg" alt="Panel Uran" />
+              <span>Uran</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/11-Komety_panel.jpg" data-title="Komety">
+              <img src="./assets/panels/11-Komety_panel.jpg" alt="Panel Komety" />
+              <span>Komety</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/12-Zatmeni_panel.jpg" data-title="Zatmění">
+              <img src="./assets/panels/12-Zatmeni_panel.jpg" alt="Panel Zatmění" />
+              <span>Zatmění</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/13-Neptun_panel.jpg" data-title="Neptun">
+              <img src="./assets/panels/13-Neptun_panel.jpg" alt="Panel Neptun" />
+              <span>Neptun</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/14-Vznik-slunecni-soustavy_panel.jpg" data-title="Vznik Sluneční soustavy">
+              <img src="./assets/panels/14-Vznik-slunecni-soustavy_panel.jpg" alt="Panel Vznik Sluneční soustavy" />
+              <span>Vznik Sluneční soustavy</span>
+            </button>
+            <button class="panel-tile" type="button" data-image="./assets/panels/15-Historie-AK_panel.jpg" data-title="Historie AK Vraclav">
+              <img src="./assets/panels/15-Historie-AK_panel.jpg" alt="Panel Historie AK Vraclav" />
+              <span>Historie AK Vraclav</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="visit-section" id="navstivte">
+          <div class="visit-copy">
+            <p class="eyebrow">Návštěva a komunikace</p>
+            <h2>Web připravený pro veřejnost, školy i turistickou propagaci.</h2>
+            <p>
+              Tahle první verze funguje jako prezentační microsite. Hodí se pro zveřejnění na subdoméně,
+              doplnění aktuálních akcí nebo rozšíření o detail jednotlivých zastavení, mapy v telefonu a
+              kontaktní informace pořadatele nebo astronomického klubu.
+            </p>
+          </div>
+          <div class="visit-points">
+            <article>
+              <h3>Silný první dojem</h3>
+              <p>Hero sekce používá stejné motivy, barvy a panely jako offline stezka.</p>
+            </article>
+            <article>
+              <h3>Připraveno pro rozšíření</h3>
+              <p>Statický základ lze snadno doplnit o vícejazyčnost, program akcí nebo detailní mapu.</p>
+            </article>
+            <article>
+              <h3>Vhodné pro Vercel</h3>
+              <p>Projekt je bez závislostí a nasaditelný jako čistý statický web s minimální správou.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="lightbox" id="lightbox">
+      <form method="dialog" class="lightbox-backdrop">
+        <button class="lightbox-close" value="close" aria-label="Zavřít detail panelu">×</button>
+        <div class="lightbox-content">
+          <img id="lightbox-image" src="" alt="" />
+          <p id="lightbox-title"></p>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./app.js"></script>
   </body>
 </html>
