@@ -19,7 +19,7 @@ body {
   color: var(--text);
   font-family: "Nunito", "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
   background:
-    linear-gradient(180deg, rgba(2, 7, 18, 0.56), rgba(2, 7, 18, 0.9)),
+    linear-gradient(180deg, rgba(2, 7, 18, 0.28), rgba(2, 7, 18, 0.52)),
     url("./assets/background/Planetarni-Stezka_background.jpg") center center / cover no-repeat fixed;
 }
 
