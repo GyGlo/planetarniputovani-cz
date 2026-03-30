@@ -535,9 +535,7 @@ main > section {
 }
 
 .route-layout {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 1.5rem;
+  display: block;
 }
 
 .route-panel {
@@ -548,6 +546,10 @@ main > section {
 .info-card img {
   width: 100%;
   border-radius: var(--radius-md);
+}
+
+.map-card img + img {
+  margin-top: 1rem;
 }
 
 .info-card h3,
