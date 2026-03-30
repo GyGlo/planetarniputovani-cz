@@ -364,11 +364,12 @@ main > section {
 .solar-scene::after {
   content: "";
   position: absolute;
-  inset: -8%;
+  inset: -14%;
   pointer-events: none;
   background:
-    linear-gradient(to left, rgba(4, 16, 31, 0), rgba(4, 16, 31, 0.06) 62%, rgba(4, 16, 31, 0.22) 100%),
-    linear-gradient(to top, rgba(4, 16, 31, 0), rgba(4, 16, 31, 0.08) 58%, rgba(4, 16, 31, 0.2) 100%);
+    radial-gradient(circle at 78% 52%, rgba(4, 16, 31, 0), rgba(4, 16, 31, 0.08) 42%, rgba(4, 16, 31, 0.16) 72%, rgba(4, 16, 31, 0.22) 100%),
+    radial-gradient(circle at 50% 108%, rgba(4, 16, 31, 0), rgba(4, 16, 31, 0.08) 50%, rgba(4, 16, 31, 0.18) 100%);
+  filter: blur(18px);
 }
 
 .planet-runner {
