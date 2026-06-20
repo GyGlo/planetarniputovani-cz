@@ -119,6 +119,7 @@ button { font: inherit; }
 }
 .cookie-banner strong { display: block; color: var(--text); }
 .cookie-banner p { max-width: 62ch; margin: 0.35rem 0 0; color: var(--muted); font-size: 0.93rem; line-height: 1.5; }
+.cookie-banner p a { color: var(--sky); font-weight: 800; }
 .cookie-banner-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.7rem; }
 .cookie-banner-actions .button { padding: 0.75rem 1rem; white-space: nowrap; }
 main > section { padding-left: 56px; }
@@ -260,6 +261,13 @@ main > section { padding-left: 56px; }
 .acknowledgements-list strong { color: var(--text); }
 .acknowledgements-list span, .acknowledgements-note { color: var(--muted); line-height: 1.7; }
 .acknowledgements-note { margin: 2rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--line); font-weight: 700; }
+.privacy-page-content { display: grid; gap: 1.25rem; }
+.privacy-page-content .page-hero { padding-bottom: 1.5rem; }
+.privacy-card { padding: 1.5rem 2rem; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow); }
+.privacy-card h2 { margin: 0 0 0.8rem; font-size: clamp(1.5rem, 2.5vw, 2rem); }
+.privacy-card p { max-width: 78ch; margin: 0 0 0.8rem; color: var(--muted); line-height: 1.7; }
+.privacy-card p:last-child { margin-bottom: 0; }
+.privacy-card a { color: var(--sky); font-weight: 800; }
 .supporters-block { margin-top: 2rem; padding: 1.5rem 2rem; border-radius: var(--radius-lg); background: #fff; color: #172438; }
 .supporters-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; }
 .supporters-logos img { width: 12.75rem; height: 6.75rem; object-fit: contain; }
@@ -342,6 +350,7 @@ main > section { padding-left: 56px; }
   .cookie-banner { align-items: flex-start; flex-direction: column; gap: 1rem; }
   .cookie-banner-actions { justify-content: flex-start; }
   .acknowledgements-card { padding: 1.25rem; }
+  .privacy-card { padding: 1.25rem; }
   .acknowledgements-list div { grid-template-columns: 1fr; gap: 0.2rem; }
   .supporters-block { padding: 1.25rem; }
   .supporters-logos { gap: 0.75rem; }

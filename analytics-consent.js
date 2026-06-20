@@ -53,7 +53,7 @@
     banner.innerHTML = `
       <div>
         <strong>Pomozte nám zlepšovat Planetární putování</strong>
-        <p>Se souhlasem používáme Google Analytics pro anonymizované měření návštěvnosti. Volbu můžete kdykoli změnit v patičce.</p>
+        <p>Se souhlasem používáme Google Analytics pro anonymizované měření návštěvnosti. <a href="/ochrana-soukromi.html">Více o ochraně soukromí</a>. Volbu můžete kdykoli změnit v patičce.</p>
       </div>
       <div class="cookie-banner-actions">
         <button class="button button-secondary" type="button" data-cookie-decline>Pouze nezbytné</button>
