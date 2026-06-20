@@ -35,6 +35,7 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 .page-shell { position: relative; }
 .site-header,
+.site-footer,
 .hero,
 .story-band,
 .route-section,
@@ -42,7 +43,8 @@ button { font: inherit; }
 .map-display-section,
 .gallery-grid-section,
 .content-page,
-.route-preview {
+.route-preview,
+.home-story-section {
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 0 auto;
 }
@@ -101,6 +103,13 @@ button { font: inherit; }
 }
 .nav-dropdown-menu a:hover,
 .nav-dropdown-menu a.is-current { color: var(--text); background: rgba(255,255,255,0.08); }
+.site-footer {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  margin-top: 4rem; padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: 0.94rem;
+}
+.site-footer a { color: var(--sky); font-weight: 800; }
+.site-footer a:hover { color: var(--text); }
 main > section { padding-left: 56px; }
 .hero {
   display: block; padding: 5.5rem 0 4rem; position: relative; overflow: visible; min-height: 820px;
@@ -126,7 +135,7 @@ main > section { padding-left: 56px; }
 .prose p,
 .panel-card p,
 .gallery-card span { color: var(--muted); line-height: 1.7; }
-.hero-text { max-width: 62ch; margin: 1.4rem 0 0; font-size: 1.05rem; }
+.hero-text { max-width: 78ch; margin: 1.4rem 0 0; font-size: 1.05rem; }
 .hero-actions,
 .page-links-row,
 .panel-card-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
@@ -210,10 +219,12 @@ main > section { padding-left: 56px; }
 .mini-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 1.5rem; padding: 1rem; border-radius: var(--radius-md); background: rgba(255,255,255,0.04); }
 .route-section, .route-listing-section, .gallery-grid-section, .map-display-section, .route-preview { padding: 4rem 0 0; }
 .history-page-content { display: grid; gap: 3rem; }
-.history-hero { padding-bottom: 0; }
+.page-hero.history-hero { max-width: none; padding-bottom: 0; }
+.history-hero .page-lead { max-width: none; }
 .history-section { display: flow-root; }
 .history-section-reverse { display: flow-root; }
 .history-copy h2, .history-callout h2 { margin: 0 0 1rem; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.08; }
+.history-copy { text-align: left; }
 .history-copy p { margin: 0 0 1rem; }
 .history-image { float: right; width: calc(33.333% - 1.5rem); margin: 0 0 1.25rem 2rem; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
 .history-image img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
@@ -222,6 +233,31 @@ main > section { padding-left: 56px; }
 .history-callout { margin: 0; }
 .history-callout p { max-width: 75ch; color: var(--muted); line-height: 1.7; }
 .history-gallery-section { padding-bottom: 2rem; }
+.home-story-section { display: flow-root; padding: 3rem 0 2rem; color: var(--muted); line-height: 1.7; }
+.home-story-section h2 { margin: 1.75rem 0 1rem; color: var(--text); font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.08; }
+.home-story-section h2.home-story-subheading { color: var(--sky); font-size: clamp(1.4rem, 2.2vw, 1.9rem); }
+.home-story-highlight { color: var(--gold); }
+.home-story-section p { margin: 0 0 1rem; }
+.home-story-image { float: right; width: calc(33.333% - 1.5rem); margin: 0 0 1.25rem 2rem; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+.home-story-image img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.home-story-image-wide { float: none; width: 100%; margin: 2rem 0; }
+.home-story-image-wide img { aspect-ratio: auto; height: auto; }
+.acknowledgements-page .page-hero { padding-bottom: 1.5rem; }
+.acknowledgements-card { padding: 2rem; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow); }
+.acknowledgements-list { display: grid; gap: 0.7rem; }
+.acknowledgements-list div { display: grid; grid-template-columns: minmax(13rem, 0.9fr) minmax(0, 1.4fr); gap: 1.5rem; align-items: baseline; padding-bottom: 0.7rem; border-bottom: 1px solid rgba(145, 182, 236, 0.12); }
+.acknowledgements-list strong { color: var(--text); }
+.acknowledgements-list span, .acknowledgements-note { color: var(--muted); line-height: 1.7; }
+.acknowledgements-note { margin: 2rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--line); font-weight: 700; }
+.supporters-block { margin-top: 2rem; padding: 1.5rem 2rem; border-radius: var(--radius-lg); background: #fff; color: #172438; }
+.supporters-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; }
+.supporters-logos img { width: 12.75rem; height: 6.75rem; object-fit: contain; }
+.supporters-block p { max-width: 70ch; margin: 2rem auto 0; color: #536276; text-align: center; font-weight: 600; line-height: 1.65; }
+.map-page-content { display: grid; gap: 1.5rem; }
+.map-page-hero { padding-bottom: 0; }
+.map-only-section { padding-top: 0; }
+.map-only-image { display: block; width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow); }
+.map-link { margin-top: 1.5rem; }
 .section-heading { max-width: 72ch; margin-bottom: 2rem; }
 .route-layout { display:block; }
 .route-panel { padding:1.2rem; }
@@ -272,6 +308,7 @@ main > section { padding-left: 56px; }
   .brand { margin-left: 0; justify-content: center; }
   .brand img { height: 132px; }
   .history-image { width: min(45%, 18rem); }
+  .home-story-image { width: min(45%, 18rem); }
   .site-nav { justify-content: center; border-radius: 28px; }
   .hero { min-height: auto; padding-top: 2rem; }
   .hero-visual { position: relative; inset: auto; height: 720px; margin-top: 2rem; }
@@ -289,4 +326,11 @@ main > section { padding-left: 56px; }
   .lightbox-content { max-width: calc(100% - 3.5rem); }
   .lightbox-nav { width: 2.5rem; height: 2.5rem; }
   .history-image { float: none; width: 100%; margin: 0 0 1.25rem; }
+  .home-story-image { float: none; width: 100%; margin: 0 0 1.25rem; }
+  .site-footer { align-items: flex-start; flex-direction: column; margin-top: 3rem; }
+  .acknowledgements-card { padding: 1.25rem; }
+  .acknowledgements-list div { grid-template-columns: 1fr; gap: 0.2rem; }
+  .supporters-block { padding: 1.25rem; }
+  .supporters-logos { gap: 0.75rem; }
+  .supporters-logos img { width: 10.5rem; height: 5.625rem; }
 }
