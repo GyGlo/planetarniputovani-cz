@@ -204,11 +204,24 @@ main > section { padding-left: 56px; }
 .runner-saturn { animation-duration:31s; animation-delay:-7s; }
 .runner-neptune { animation-duration:38s; animation-delay:-18s; }
 @keyframes orbit-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-.story-band { display:grid; grid-template-columns:1.15fr 0.85fr; gap:1.5rem; padding: 1rem 0 2rem; }
+.story-band { display:grid; grid-template-columns:2fr 1fr; gap:1.5rem; padding: 1rem 0 2rem; }
 .story-card h2, .section-heading h2, .page-hero h1 { font-size: clamp(2.1rem, 4vw, 3.5rem); }
 .accent-card { background: linear-gradient(160deg, rgba(246,200,93,0.14), rgba(255,122,92,0.09)), var(--surface); }
 .mini-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 1.5rem; padding: 1rem; border-radius: var(--radius-md); background: rgba(255,255,255,0.04); }
 .route-section, .route-listing-section, .gallery-grid-section, .map-display-section, .route-preview { padding: 4rem 0 0; }
+.history-page-content { display: grid; gap: 3rem; }
+.history-hero { padding-bottom: 0; }
+.history-section { display: flow-root; }
+.history-section-reverse { display: flow-root; }
+.history-copy h2, .history-callout h2 { margin: 0 0 1rem; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.08; }
+.history-copy p { margin: 0 0 1rem; }
+.history-image { float: right; width: calc(33.333% - 1.5rem); margin: 0 0 1.25rem 2rem; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+.history-image img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.history-highlight { color: var(--sky); }
+.history-activities { margin: 0 0 1rem; padding-left: 1.3rem; color: var(--muted); line-height: 1.7; }
+.history-callout { margin: 0; }
+.history-callout p { max-width: 75ch; color: var(--muted); line-height: 1.7; }
+.history-gallery-section { padding-bottom: 2rem; }
 .section-heading { max-width: 72ch; margin-bottom: 2rem; }
 .route-layout { display:block; }
 .route-panel { padding:1.2rem; }
@@ -240,15 +253,13 @@ main > section { padding-left: 56px; }
 .facts-list dt { color: var(--muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.14em; }
 .facts-list dd { margin: 0; font-weight: 800; }
 .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.gallery-card { display:grid; gap:0.8rem; border:0; cursor:pointer; text-align:left; padding:0.8rem; }
+.gallery-card { display:block; border:0; cursor:pointer; padding:0.8rem; }
 .gallery-card img { width:100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; }
 .lightbox { width: min(1100px, calc(100% - 2rem)); border: 0; padding: 0; background: transparent; }
 .lightbox::backdrop { background: rgba(2, 7, 18, 0.88); backdrop-filter: blur(8px); }
 .lightbox-backdrop { position: relative; display: flex; align-items: center; justify-content: center; min-height: 70vh; }
-.lightbox-content { margin: 0; max-width: min(860px, 100% - 8rem); display: grid; gap: 1rem; }
+.lightbox-content { margin: 0; max-width: min(860px, 100% - 8rem); }
 .lightbox-content img { width: 100%; max-height: 78vh; object-fit: contain; border-radius: var(--radius-md); }
-.lightbox-content figcaption { display: grid; gap: 0.35rem; text-align: center; }
-.lightbox-content span { color: var(--muted); }
 .lightbox-close,
 .lightbox-nav { position: absolute; border: 0; border-radius: 999px; background: rgba(255,255,255,0.1); color: var(--text); cursor: pointer; }
 .lightbox-close { top: 1rem; right: 1rem; width: 2.75rem; height: 2.75rem; font-size: 1.8rem; }
@@ -260,6 +271,7 @@ main > section { padding-left: 56px; }
   .site-header { flex-direction: column; align-items: stretch; }
   .brand { margin-left: 0; justify-content: center; }
   .brand img { height: 132px; }
+  .history-image { width: min(45%, 18rem); }
   .site-nav { justify-content: center; border-radius: 28px; }
   .hero { min-height: auto; padding-top: 2rem; }
   .hero-visual { position: relative; inset: auto; height: 720px; margin-top: 2rem; }
@@ -276,4 +288,5 @@ main > section { padding-left: 56px; }
   .page-hero, .content-page { padding-top: 1.2rem; }
   .lightbox-content { max-width: calc(100% - 3.5rem); }
   .lightbox-nav { width: 2.5rem; height: 2.5rem; }
+  .history-image { float: none; width: 100%; margin: 0 0 1.25rem; }
 }

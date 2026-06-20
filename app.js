@@ -26,8 +26,6 @@ planets.forEach((planet) => {
 const triggers = Array.from(document.querySelectorAll('[data-gallery-trigger]'));
 const dialog = document.getElementById('gallery-lightbox');
 const image = document.getElementById('gallery-lightbox-image');
-const title = document.getElementById('gallery-lightbox-title');
-const caption = document.getElementById('gallery-lightbox-caption');
 const prev = document.querySelector('[data-gallery-prev]');
 const next = document.querySelector('[data-gallery-next]');
 const close = document.querySelector('[data-gallery-close]');
@@ -35,12 +33,10 @@ let currentIndex = 0;
 
 const renderGalleryItem = (index) => {
   const item = triggers[index];
-  if (!item || !image || !title || !caption) return;
+  if (!item || !image) return;
   currentIndex = index;
   image.src = item.dataset.src || '';
-  image.alt = item.dataset.title || '';
-  title.textContent = item.dataset.title || '';
-  caption.textContent = item.dataset.caption || '';
+  image.alt = item.querySelector('img')?.alt || '';
 };
 
 const openGallery = (index) => {
