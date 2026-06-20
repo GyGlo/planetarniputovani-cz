@@ -256,6 +256,10 @@ main > section { padding-left: 56px; }
 .home-story-image-wide img { aspect-ratio: auto; height: auto; }
 .home-story-image-section { padding: 2rem 0 0; }
 .home-story-image-section .home-story-image-wide { margin: 0; }
+.page-home main { display: flex; flex-direction: column; gap: 1.5rem; }
+.page-home .hero { padding-bottom: 1.5rem; }
+.page-home .story-band, .page-home .home-story-image-section { padding: 0; }
+.page-home .home-story-section:not(.home-story-image-section) { padding: 0 0 1.5rem; }
 .acknowledgements-page .page-hero { padding-bottom: 1.5rem; }
 .acknowledgements-card { padding: 2rem; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow); }
 .acknowledgements-list { display: grid; gap: 0.7rem; }
