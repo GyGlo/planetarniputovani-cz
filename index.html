@@ -3,25 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Naučná planetární stezka Vraclav</title>
-    <meta
-      name="description"
-      content="Naučná planetární stezka Vraclav. Jednoduchá prezentační landing page s logem a pozadím projektu."
-    />
+    <title>Planetární stezka Vraclav</title>
+    <meta name="description" content="Planetární stezka Vraclav. Úvod, mapa trasy a rozcestník všech zastavení." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preload" href="./assets/background/Planetarni-Stezka_background.jpg" as="image" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="preload" href="/background/Planetarni-Stezka_background.jpg" as="image" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
   </head>
-  <body>
-    <main class="landing">
-      <div class="landing-glow" aria-hidden="true"></div>
-      <img class="landing-logo" src="./assets/logo/PlanetStezka_logo_4.webp" alt="Logo Planetárního putování" />
-      <h1>Naučná planetární stezka Vraclav</h1>
-    </main>
+  <body class="page-home">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/index.html" aria-label="Planetární stezka Vraclav">
+          <img src="/logo/PlanetStezka_logo_4.webp" alt="Logo Planetární stezky" />
+        </a>
+        
+      <nav class="site-nav" aria-label="Hlavní navigace">
+        <a class="nav-link" href="/index.html">Stezka</a>
+        <a class="nav-link" href="/mapa.html">Mapa</a>
+        <a class="nav-link" href="/historie.html">Historie AK</a>
+        <a class="nav-link" href="/galerie.html">Galerie</a>
+      </nav>
+      </header>
+      
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Planetární stezka Vraclav</p>
+            <h1>Projděte Sluneční soustavu během jediné vycházky.</h1>
+            <p class="hero-text">
+              Planetární stezka propojuje krajinu, astronomii a příběh místního astronomického klubu.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="/mapa.html">Zobrazit mapu</a>
+            </div>
+            <div class="stat-grid" aria-label="Základní údaje o stezce">
+              <article class="stat-card"><strong>6 km</strong><span>celková délka vycházky</span></article>
+              <article class="stat-card"><strong>15</strong><span>zastavení a tematických panelů</span></article>
+              <article class="stat-card"><strong>1 : 1 000 000 000</strong><span>měřítko Sluneční soustavy</span></article>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="solar-scene">
+              <div class="solar-haze"></div>
+              <div class="solar-sun"></div>
+              <div class="planet-tooltip" id="planet-tooltip" role="status" aria-live="polite"></div>
+              <div class="orbit orbit-mercury"><span class="planet-runner runner-mercury"><button class="planet planet-mercury" type="button" data-planet-name="Merkur" aria-label="Merkur"></button></span></div>
+              <div class="orbit orbit-venus"><span class="planet-runner runner-venus"><button class="planet planet-venus" type="button" data-planet-name="Venuše" aria-label="Venuše"></button></span></div>
+              <div class="orbit orbit-earth"><span class="planet-runner runner-earth"><button class="planet planet-earth" type="button" data-planet-name="Země" aria-label="Země"></button></span></div>
+              <div class="orbit orbit-mars"><span class="planet-runner runner-mars"><button class="planet planet-mars" type="button" data-planet-name="Mars" aria-label="Mars"></button></span></div>
+              <div class="orbit orbit-jupiter"><span class="planet-runner runner-jupiter"><button class="planet planet-jupiter" type="button" data-planet-name="Jupiter" aria-label="Jupiter"></button></span></div>
+              <div class="orbit orbit-saturn"><span class="planet-runner runner-saturn"><button class="planet planet-saturn" type="button" data-planet-name="Saturn" aria-label="Saturn"><span class="planet-ring"></span></button></span></div>
+              <div class="orbit orbit-neptune"><span class="planet-runner runner-neptune"><button class="planet planet-neptune" type="button" data-planet-name="Neptun" aria-label="Neptun"></button></span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="story-band" id="o-stezce">
+          <div class="story-card">
+            <p class="eyebrow">Proč stezka vznikla</p>
+            <h2>Popularizace astronomie zasazená přímo do krajiny.</h2>
+            <p>
+              Projekt navazuje na dlouholetou činnost místního astronomického klubu, který od roku 1977
+              pořádá programy pro děti, mládež i veřejnost. Stezka převádí poměry velikostí a vzdáleností
+              planet do skutečné krajiny a doplňuje je o panely s tématy jako komety, zatmění nebo vznik
+              Sluneční soustavy.
+            </p>
+          </div>
+          <div class="story-card accent-card">
+            <p class="eyebrow">Jak je stezka koncipovaná</p>
+            <p>
+              Jednotlivá zastavení jsou rozestavena v přesném poměru zmenšení. Návštěvník tak nevnímá jen pořadí planet,
+              ale i skutečné rozestupy, které se v běžných ilustracích často ztrácejí.
+            </p>
+            <div class="mini-stats">
+              <div><strong>58 m</strong><span>Merkur od Slunce</span></div>
+              <div><strong>778 m</strong><span>Jupiter od Slunce</span></div>
+              <div><strong>4,5 km</strong><span>Neptun od Slunce</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-story-section">
+          <figure class="home-story-image">
+            <img src="/assets/home/slunecni-soustava.jpeg" alt="Sluneční soustava" loading="lazy" />
+          </figure>
+          <p>V každodenním shonu si málokdo z nás uvědomí, že svět, který nás obklopuje, je pouze malinkatou částí v ohromujícím vesmírném nekonečnu. Abychom se alespoň trochu dotkli těchto tajemných a nezměrných dálek, vybudoval Astronomický klub za finanční podpory Pardubického kraje, Ministerstva pro místní rozvoj, Svazku obcí mikroregionu a Obecního úřadu ve Vraclavi poznávací stezku s názvem: <span class="home-story-highlight">Planetární putování.</span></p>
+
+          <h2 class="home-story-subheading">Co to vlastně pro návštěvníky znamená?</h2>
+          <p class="home-story-highlight">Pro názorné pochopení tvůrci stezky zmenšili celou Sluneční soustavu v měřítku 1 : 1 miliardě.<br />Znamená to, že 1 centimetr na stezce odpovídá 10 000 kilometrům ve skutečnosti.</p>
+          <p>Díky tomuto modelu si můžeme lépe představit nejen relativní velikosti planet, ale především jejich vzájemné vzdálenosti. V tomto měřítku má Slunce průměr 1,4 metru. Země, velká jako kulička o průměru 1,3 cm, obíhá kolem Slunce ve vzdálenosti 149 metrů. Nejvzdálenější planeta Neptun se nachází téměř 4,5 kilometru daleko. Rychlost světla je 30 centimetrů za sekundu.</p>
+          <p>Stezka začíná u modelu Slunce a pokračuje směrem k jednotlivým planetám, zhotoveným pomocí 3D tisku ve správných vzdálenostech. Každé zastavení poskytuje základní informace o dané planetě.</p>
+
+          <figure class="home-story-image home-story-image-wide">
+            <img src="/assets/fotky%20na%20strance%20galerie/IMG_5564.jpeg" alt="Panel Uranu na Planetární stezce" loading="lazy" />
+          </figure>
+          <p>Součástí stezky jsou také panely s informacemi o dalších tělesech a zajímavostech, které patří do sluneční soustavy. Na stezce potká návštěvník celkem patnáct naučných panelů. Odpočinek si bude moci dopřát na třech zastřešených sezeních.</p>
+          <p>Příchozí jistě zaujme možnost rozsvítit si unikátní model Slunce, pokud bude správně zodpovězena položená otázka.</p>
+          <p>Trasa v délce 6 km navíc vede velmi pěknou krajinou, která je historicky cennou lokalitou, kterou člověk obýval již v době neolitické, bronzové a době hradištní, kdy zde stávalo v 8. až 11. stol. opevněné slovanské hradiště.</p>
+        </section>
+
+      </main>
+    
+      <footer class="site-footer">
+        <span>© Planetární putování 2026</span>
+        <a href="/podekovani.html">Poděkování</a>
+      </footer>
+    </div>
+    <script src="/app.js"></script>
   </body>
 </html>
