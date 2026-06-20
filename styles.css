@@ -108,10 +108,10 @@ button { font: inherit; }
   margin-top: 4rem; padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--line);
   color: var(--muted); font-size: 0.94rem;
 }
-.site-footer a { color: var(--sky); font-weight: 800; }
-.site-footer a:hover { color: var(--text); }
-.cookie-settings { padding: 0; border: 0; color: var(--sky); background: transparent; cursor: pointer; font: inherit; font-weight: 800; }
-.cookie-settings:hover { color: var(--text); }
+.footer-links { display: flex; align-items: center; gap: 0.55rem; color: var(--muted); }
+.site-footer a, .cookie-settings { color: inherit; font-weight: inherit; }
+.site-footer a:hover, .cookie-settings:hover { color: var(--text); }
+.cookie-settings { padding: 0; border: 0; background: transparent; cursor: pointer; font: inherit; }
 .cookie-banner {
   position: fixed; z-index: 50; right: 1rem; bottom: 1rem; left: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
   width: min(calc(100% - 2rem), 68rem); margin: 0 auto; padding: 1.25rem 1.5rem; border: 1px solid var(--line); border-radius: var(--radius-md);
@@ -347,6 +347,7 @@ main > section { padding-left: 56px; }
   .history-image { float: none; width: 100%; margin: 0 0 1.25rem; }
   .home-story-image { float: none; width: 100%; margin: 0 0 1.25rem; }
   .site-footer { align-items: flex-start; flex-direction: column; margin-top: 3rem; }
+  .footer-links { flex-wrap: wrap; }
   .cookie-banner { align-items: flex-start; flex-direction: column; gap: 1rem; }
   .cookie-banner-actions { justify-content: flex-start; }
   .acknowledgements-card { padding: 1.25rem; }
