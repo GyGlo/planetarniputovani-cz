@@ -345,7 +345,7 @@ main > section { padding-left: 56px; }
   .nav-dropdown-menu { left: 50%; right: auto; transform: translate(-50%, 8px); width: min(22rem, 92vw); }
   .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { transform: translate(-50%, 0); }
   .hero h1, .page-hero h1, .story-card h2, .section-heading h2 { font-size: clamp(2.2rem, 10vw, 3.2rem); }
-  .hero-visual { height: 520px; }
+  .page-home .hero-visual { display: none; }
   .story-band, .stat-grid, .mini-stats, .quick-links-grid, .route-stop-grid, .gallery-grid { grid-template-columns: 1fr; }
   .page-hero, .content-page { padding-top: 1.2rem; }
   .lightbox-content { max-width: calc(100% - 3.5rem); }
