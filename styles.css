@@ -315,6 +315,7 @@ main > section { padding-left: 56px; }
 .facts-list dd { margin: 0; font-weight: 800; }
 .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .gallery-event-section { padding-top: 2.25rem; }
+#slavnostni-otevreni { scroll-margin-top: 9rem; }
 .gallery-event-title { margin: 0 0 1rem; color: var(--muted); font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 800; }
 .gallery-card { display:block; border:0; cursor:pointer; padding:0.8rem; }
 .gallery-card img { width:100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; }
