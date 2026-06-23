@@ -314,6 +314,8 @@ main > section { padding-left: 56px; }
 .facts-list dt { color: var(--muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.14em; }
 .facts-list dd { margin: 0; font-weight: 800; }
 .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.gallery-event-section { padding-top: 2.25rem; }
+.gallery-event-title { margin: 0 0 1rem; color: var(--muted); font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 800; }
 .gallery-card { display:block; border:0; cursor:pointer; padding:0.8rem; }
 .gallery-card img { width:100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; }
 .lightbox { width: min(1100px, calc(100% - 2rem)); border: 0; padding: 0; background: transparent; }
